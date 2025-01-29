@@ -1,0 +1,28 @@
+
+Which annotation is used to mark a class as a Spring component?
+
+A) @Service
+B) @Component
+C) @Controller
+D) All of the above
+
+Answer: D
+
+Which interface is used to execute SQL queries in JDBC?
+a) Statement
+b) Connection
+c) ResultSet
+d) PreparedStatement
+
+Answer: a) Statement
+
+32). To perform File I/O operations, we must use _____________ header file. 
+A: < ifstream>
+ B: < ofstream>
+ C: < fstream> 
+D: Any of these
+
+ANSWER fstream   but it showing any of these
+
+
+concept of inner calss and outer calss

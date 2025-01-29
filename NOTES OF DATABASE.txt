@@ -1,0 +1,156 @@
+Why oracle is considered as powerful RDBMS?
+
+Oracle follows approximately 10 to 12 Codd rules.
+No other RDBMS follows all Codd rules.
+
+SQL -Languages-
+
+DDL -Data definition language-CREATE,ALTER,DROP,RENAME,TRUNCATE
+DML- Data Manipulation language-INSERT,UPDATE,DELETE 
+DQL- Data Query Language-SELECT
+TCL-Transactional control-COMMIT,ROLLBACK
+DCL- Data Control Language-GRANT,REVOKE
+
+Float(p,s)-p-precision- total number digits including decimal.
+           s-scale -number of digits after decimal.
+
+salary float(14,2)- means maximum 11 digits before decimal and 2 digits after decimal.
+
+by default 10,2
+
+
+name char(10)- RAM -
+name varchar(10)-RAM -all 7 spaces are released
+abc enum('A','B','C')
+
+DDL -Data Definition Language- CREATE,ALTER,DROP,RENAME,TRUNCATE
+    All commands are AUTOCOMMIT.
+     
+CREATE- create database,tables,views,index,procedure,functions,triggers
+
+SQL command rules-
+
+1. All the commands are terminated by (;).
+2. The name of tables or other structures may not be reserved keywords.
+3. The names of tables or columns should be maximum 32 characters long.
+4. The commands are not case sensitive but in conditions it will be case sensitive.
+
+SHOW DATABASES;- to view all existing databases.
+USE DATABASENAME; -this using that particular database.
+SHOW TABLES- to view all tables in that database.
+
+To create new database-
+
+CREATE DATABASE Database name;
+
+To create the tables:
+CREATE-
+
+create table tablename(column1 datatype(size),column2 datatype(size),........columnn datatype(size));
+
+Write a query to create a new table as EMP with columns as empno,ename,sal,deptno.
+
+create table emp(empno int,ename varchar(40),sal decimal(14,2),deptno int);
+
+To view structure of table-
+describe tablename;
+
+ALTER-
+To add ,modify,change name and drop any column we use ALTER.
+
+a) to add new column-
+
+syntax:
+alter table tablename add columnname datatype(size);
+
+WAQ to add new column as mgr_id in emp table.
+
+alter table emp add mgr_id int;
+
+b) to modify existing column-
+
+Modify can change the datatypes and size.
+
+Restrictions for changing datatypes-
+
+1. varchar cannot be changed to char but vice versa is possible.
+2. int cannot be changed to date and vice versa is not possible.
+3. date and int can be changed to char and vice versa is also possible.
+
+syntax:
+alter table tablename modify columname datatype(size);
+
+WAQ to change the datatype of sal from decimal to int and increase the size of varchar in ename column.
+
+alter table emp modify sal int;
+
+alter table emp modify ename varchar(50);
+
+
+c) to change name of the column -
+
+syntax:
+alter table tablename rename column old columnname to newcolumnname;
+
+WAQ to change the name of mgr_id to mgr in emp table.
+
+alter table emp rename column mgr_id to mgr;
+
+d) to drop existing column-
+
+some unused columns in a table should be removed.
+
+syntax:
+alter table tablename drop column columnname;
+
+WAQ to remove mgr column from emp.
+
+alter table emp drop column mgr;
+
+3. DROP -to permanently remove tables,databases,views,index,procedures,functions and triggers.
+
+syntax:
+drop database databasename;
+
+drop table tablename;
+
+4. RENAME -To rename existing table to new name.
+
+syntax:
+rename table  old name to new name;
+
+WAQ to rename emp to e.
+
+rename table emp to e;
+
+5. TRUNCATE-removes all rows permanently.
+
+DML- Data Manipulation Language- INSERT,UPDATE,DELETE
+These commands are not AUTOCOMMIT.
+
+a) INSERT- To add data to the table.
+
+syntax:
+
+insert into tablename(column1,column2,.....columnn) values(value 1,value2,......valuen)
+
+WAQ to populate data in emp.
+
+insert into emp(empno,ename,sal,dno) values(100,'John',24000,10);
+
+To confirm addition of rows-
+
+select * from tablename;
+
+insert into emp(empno,ename,sal,dno) values(200,'Jon',22000,20),(300,'Marie',25000,20);
+
+
+
+
+
+
+
+
+
+
+

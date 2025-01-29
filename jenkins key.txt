@@ -1,0 +1,6 @@
+52a739bacaf441cab434fc074c61d068
+
+
+the key for Jenkins
+
+This may also be found at: C:\Users\Rishabh Singh\.jenkins\secrets\initialAdminPassword

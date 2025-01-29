@@ -1,0 +1,2 @@
+Write a function to insert a node in list in its sorted position.
+Write a function to delete a node based on its value
